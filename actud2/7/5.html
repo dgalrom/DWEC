@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Actividades</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var fecha = new Date("2025-03-07");
+        fecha.setFullYear(2030);
+        var texto = "<p>Fecha original: 2025-03-07</p>";
+        texto = texto + "<p>Fecha modificada: " + fecha.getFullYear() + "-" + (fecha.getMonth() + 1) + "-" + fecha.getDate() + "</p>";
+        document.getElementById("resultado").innerHTML = texto;
+    </script>
+</body>
+</html>

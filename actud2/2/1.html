@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Actividades</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var nota = parseFloat(prompt("Ingresa la nota (0-10):"));
+        var texto = "<p>Nota: " + nota + "</p>";
+        if (nota < 5) {
+            texto = texto + "<p>Suspenso</p>";
+        } else if (nota >= 5 && nota < 7) {
+            texto = texto + "<p>Aprobado</p>";
+        } else if (nota >= 7 && nota < 9) {
+            texto = texto + "<p>Notable</p>";
+        } else {
+            texto = texto + "<p>Sobresaliente</p>";
+        }
+        document.getElementById("resultado").innerHTML = texto;
+    </script>
+</body>
+</html>

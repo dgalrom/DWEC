@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Actividades</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var i = 1;
+        var texto = "<p>Números pares del 1 al 20:</p>";
+        while (i <= 20) {
+            if (i % 2 == 0) {
+                texto = texto + "<p>" + i + "</p>";
+            }
+            i++;
+        }
+        document.getElementById("resultado").innerHTML = texto;
+    </script>
+</body>
+</html>

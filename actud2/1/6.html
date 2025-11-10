@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Actividades</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var numero = parseInt(prompt("Ingresa un número para su tabla:"));
+        var texto = "<p>Tabla del " + numero + ":</p>";
+        for (var i = 1; i <= 10; i++) {
+            texto = texto + "<p>" + numero + " x " + i + " = " + (numero * i) + "</p>";
+        }
+        document.getElementById("resultado").innerHTML = texto;
+    </script>
+</body>
+</html>

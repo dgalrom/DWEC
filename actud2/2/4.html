@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Actividades</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var plato = prompt("Elige plato: carne, pescado o vegetariano").toLowerCase();
+        var bebida;
+        if (plato === "carne") {
+            bebida = "vino tinto";
+        } else if (plato === "pescado") {
+            bebida = "vino blanco";
+        } else if (plato === "vegetariano") {
+            bebida = "agua con gas";
+        } else {
+            bebida = "cualquiera";
+        }
+        var texto = "<p>Plato: " + plato + "</p>";
+        texto = texto + "<p>Bebida recomendada: " + bebida + "</p>";
+        document.getElementById("resultado").innerHTML = texto;
+    </script>
+</body>
+</html>

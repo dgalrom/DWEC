@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Actividades</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var fechaTexto = prompt("Ingresa fecha (YYYY-MM-DD):");
+        var fecha = new Date(fechaTexto);
+        var dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+        var dia = dias[fecha.getDay()];
+        var texto = "<p>Fecha: " + fechaTexto + "</p>";
+        texto = texto + "<p>Día: " + dia + "</p>";
+        document.getElementById("resultado").innerHTML = texto;
+    </script>
+</body>
+</html>

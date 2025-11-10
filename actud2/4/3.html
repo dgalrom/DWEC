@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Actividades</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var empresa = {
+            nombre: "TechCorp",
+            direccion: {
+                calle: "Calle Principal 123",
+                ciudad: "Madrid"
+            },
+            actividades: ["Desarrollo", "Marketing", "Ventas"]
+        };
+        var texto = "<p>Empresa: " + empresa.nombre + "</p>";
+        texto = texto + "<p>Dirección: " + empresa.direccion.calle + ", " + empresa.direccion.ciudad + "</p>";
+        texto = texto + "<p>Actividades: " + empresa.actividades.join(", ") + "</p>";
+        document.getElementById("resultado").innerHTML = texto;
+    </script>
+</body>
+</html>

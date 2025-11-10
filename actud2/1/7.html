@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Actividades</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var radio = parseFloat(prompt("Ingresa el radio:"));
+        var area = Math.PI * radio * radio;
+        var circunferencia = 2 * Math.PI * radio;
+        var texto = "<p>Para radio " + radio + ":</p>";
+        texto = texto + "<p>Área: " + area.toFixed(2) + "</p>";
+        texto = texto + "<p>Circunferencia: " + circunferencia.toFixed(2) + "</p>";
+        document.getElementById("resultado").innerHTML = texto;
+    </script>
+</body>
+</html>

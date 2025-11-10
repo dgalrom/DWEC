@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Actividades</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var edades = [15, 20, 17, 25, 16];
+        var mayores = edades.filter(function(edad) { return edad >= 18; });
+        var texto = "<p>Edades: " + edades.join(", ") + "</p>";
+        texto = texto + "<p>Mayores de edad: " + mayores.join(", ") + "</p>";
+        document.getElementById("resultado").innerHTML = texto;
+    </script>
+</body>
+</html>

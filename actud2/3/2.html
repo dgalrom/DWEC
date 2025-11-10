@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Actividades</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var nombres = ["Ana", "Luis", "María"];
+        var apellidos = ["García", "Pérez", "López"];
+        var completo = nombres.concat(apellidos);
+        var texto = "<p>Array completo: " + completo.join(", ") + "</p>";
+        document.getElementById("resultado").innerHTML = texto;
+    </script>
+</body>
+</html>

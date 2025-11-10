@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Actividades</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var auto = {
+            marca: "Toyota",
+            modelo: "Corolla",
+            color: "azul"
+        };
+        var texto = "<p>Con for...in:</p>";
+        for (var prop in auto) {
+            texto = texto + "<p>" + prop + ": " + auto[prop] + "</p>";
+        }
+        texto = texto + "<p>Con Object.entries():</p>";
+        var entries = Object.entries(auto);
+        for (var i = 0; i < entries.length; i++) {
+            texto = texto + "<p>" + entries[i][0] + ": " + entries[i][1] + "</p>";
+        }
+        document.getElementById("resultado").innerHTML = texto;
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Actividades</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var coches = [
+            {marca: "Toyota", color: "negro"},
+            {marca: "Ford", color: "rojo"},
+            {marca: "BMW", color: "negro"}
+        ];
+        var negros = [];
+        for (var i = 0; i < coches.length; i++) {
+            if (coches[i].color === "negro") {
+                negros.push(coches[i].marca);
+            }
+        }
+        var texto = "<p>Coches negros: " + negros.join(", ") + "</p>";
+        document.getElementById("resultado").innerHTML = texto;
+    </script>
+</body>
+</html>

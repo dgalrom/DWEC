@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Actividades</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var num1 = parseInt(prompt("Ingresa el primer número:"));
+        var num2 = parseInt(prompt("Ingresa el segundo número:"));
+        var texto = "<p>Los números son: " + num1 + " y " + num2 + "</p>";
+        if (num1 > num2) {
+            texto = texto + "<p>" + num1 + " es mayor.</p>";
+        } else if (num2 > num1) {
+            texto = texto + "<p>" + num2 + " es mayor.</p>";
+        } else {
+            texto = texto + "<p>Son iguales.</p>";
+        }
+        document.getElementById("resultado").innerHTML = texto;
+    </script>
+</body>
+</html>

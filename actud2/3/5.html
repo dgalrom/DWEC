@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Actividades</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var productos = [
+            {nombre: "Laptop", precio: 800},
+            {nombre: "Mouse", precio: 15},
+            {nombre: "Teclado", precio: 50}
+        ];
+        var caros = productos.filter(function(prod) { return prod.precio > 20; }).map(function(prod) { return prod.nombre; });
+        var texto = "<p>Productos caros: " + caros.join(", ") + "</p>";
+        document.getElementById("resultado").innerHTML = texto;
+    </script>
+</body>
+</html>

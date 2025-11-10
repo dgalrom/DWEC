@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Actividades</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var texto = "<p>Fibonacci (25 elementos):</p>";
+        var a = 0;
+        var b = 1;
+        var i = 0;
+        while (i < 25) {
+            texto = texto + "<p>" + a + "</p>";
+            var temp = a + b;
+            a = b;
+            b = temp;
+            i++;
+        }
+        document.getElementById("resultado").innerHTML = texto;
+    </script>
+</body>
+</html>

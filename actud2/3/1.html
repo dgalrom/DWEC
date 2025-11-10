@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Actividades</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var lista = [];
+        lista.push("manzanas");
+        lista.push("pan");
+        lista.push("leche");
+        lista[1] = "queso";
+        lista.pop();
+        lista.sort();
+        var posicion = lista.indexOf("manzanas");
+        var texto = "<p>Lista final: " + lista.join(", ") + "</p>";
+        texto = texto + "<p>Posición de 'manzanas': " + posicion + "</p>";
+        document.getElementById("resultado").innerHTML = texto;
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Actividades</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var cateto1 = parseInt(prompt("Ingresa el primer cateto:"));
+        var cateto2 = parseInt(prompt("Ingresa el segundo cateto:"));
+        var hipotenusa = Math.sqrt(cateto1 * cateto1 + cateto2 * cateto2);
+        var texto = "<p>Catetos: " + cateto1 + " y " + cateto2 + "</p>";
+        texto = texto + "<p>Hipotenusa: " + hipotenusa.toFixed(2) + "</p>";
+        document.getElementById("resultado").innerHTML = texto;
+    </script>
+</body>
+</html>

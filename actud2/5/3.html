@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Actividades</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var nombres = ["Ana", "Pedro", "Luis", "Paula", "María"];
+        var texto = "<p>Original: " + nombres.join(", ") + "</p>";
+        for (var i = 0; i < nombres.length; i++) {
+            if (nombres[i].charAt(0) === "p") {
+                nombres.splice(i, 1);
+                i--;
+            }
+        }
+        texto = texto + "<p>Filtrado: " + nombres.join(", ") + "</p>";
+        document.getElementById("resultado").innerHTML = texto;
+    </script>
+</body>
+</html>
