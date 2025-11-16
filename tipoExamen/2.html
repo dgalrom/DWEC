@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var nota
+    var notas = []
+    var notaAlta = 0
+    var notaBaja = 10
+    for (let i = 0; i < 5; i++) {
+        nota = prompt("Introduzca un numero del 0 al 10, nota numero: "+i)
+        nota=parseFloat(nota)
+        notas.push(nota)
+        if(nota<notaBaja){
+            notaBaja=nota
+        }
+        else if(nota>notaBaja){
+            notaAlta=nota
+        }
+    }
+var media=0;
+    for (let i = 0; i < notas.length; i++) {
+        media += notas[i]
+    }
+    media=media/notas.length
+    
+    let mensaje = "";
+    if (media < 5) {
+        mensaje = "Suspenso";
+    } else if (media >= 5 && media < 7) {
+        mensaje = "Aprobado";
+    } else if (media >= 7 && media < 9) {
+        mensaje = "Notable";
+    } else if (media >= 9) {
+        mensaje = "Sobresaliente";
+    }
+
+    document.writeln(media)
+    document.writeln(notaAlta)
+    document.writeln(notaBaja)
+    document.writeln(mensaje)
+    
+
+</script>
+</html>

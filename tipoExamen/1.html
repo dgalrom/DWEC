@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+let nombre = prompt("Introduzca su nombre")
+var valido = false
+while(!valido){
+    var sabor = prompt("Sabor (vainilla, chocolate, fresa o menta)")
+    if(sabor == "vainilla" ||sabor == "chocolate" ||sabor == "fresa" ||sabor == "menta"){
+        valido = true
+    }
+}
+valido = false
+
+while(!valido){
+    var tamanio = prompt("Tamaño (pequeño, mediano, grande).")
+    if(tamanio == "pequeño" ||tamanio == "mediano" ||tamanio == "grande"){
+        valido = true
+    }
+}
+valido = false
+
+console.log(sabor, tamanio)
+
+var precioBase
+switch (sabor) {
+    case "vainilla":
+        precioBase = 2.0;
+        break;
+    case "chocolate":
+        precioBase = 3.0;
+        break;
+    case "fresa":
+        precioBase = 3.5;
+        break;
+    case "menta":
+        precioBase = 2.5;
+        break;
+
+    default:
+        break;
+}
+var precio = precioBase
+switch (tamanio) {
+    case "pequeño":
+        precio *= 1;
+        break;
+    case "mediano":
+        precio *= 1.5;
+        break;
+    case "grande":
+        precio *= 2;
+        break;
+
+    default:
+        break;
+}
+
+document.writeln(nombre)
+document.writeln(sabor)
+document.writeln(tamanio)
+document.writeln(precio)
+
+</script>
+</html>
