@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var frase = prompt("Introduzca una frase")
+    var palabras = frase.split(' ')
+
+    document.writeln("Palabras: "+palabras.length)
+    var contadorA = 0
+    for (let i = 0; i < frase.length; i++) {
+        if(frase[i]=="a"){
+            contadorA++
+        }
+    }
+
+    document.writeln("Apariciones de A: "+contadorA)
+
+    var mayusculas = frase.toUpperCase()
+    var minusculas = frase.toLowerCase()
+
+    document.writeln("Mayusculas: "+mayusculas)
+    document.writeln("Minusculas: "+minusculas)
+
+    var contadorJS = 0
+    for (let i = 0; i < palabras.length; i++) {
+    if(palabras[i]=="javascript"){
+            contadorJS++
+        }
+    }
+    document.writeln("Apariciones javascript: "+contadorJS)
+</script>
+</html>

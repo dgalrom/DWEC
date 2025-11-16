@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const usuario = {
+        nombre: "diego",
+        clave: "123",
+        intentos: 3
+    };
+
+    let nomVal = false;
+    let clavVal = false;
+    let intAct = usuario.intentos;
+
+    while (intAct > 0 && (!nomVal || !clavVal)) {
+        if (!nomVal) {
+            let intento = prompt("Introduzca el nombre: ");
+            if (intento === usuario.nombre) {
+                nomVal = true;
+                alert("Nombre correcto!");
+            } else {
+                intAct--;
+                alert(`Nombre incorrecto. Intentos restantes: ${intAct}`);
+            }
+        } else {
+            let intento = prompt("Introduzca la contraseña: ");
+            if (intento === usuario.clave) {
+                clavVal = true;
+                alert("Contraseña correcta! Login exitoso.");
+            } else {
+                intAct--;
+                alert(`Contraseña incorrecta. Intentos restantes: ${intAct}`);
+            }
+        }
+    }
+
+    if (intAct === 0 && (!nomVal || !clavVal)) {
+        alert("Se agotaron los intentos. Acceso denegado.");
+    }
+</script>
+</html>
