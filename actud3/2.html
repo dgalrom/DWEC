@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="iniciar">Iniciar alerta</button>
+  <button id="cancelar">Cancelar</button>
+
+  <script>
+    let parada;
+    document.getElementById("iniciar").onclick = function () {
+      parada = setTimeout(() => alert("Han pasado 3 segundos"), 3000);
+    };
+
+    document.getElementById("cancelar").onclick = function () {
+      clearTimeout(parada);
+    };
+  </script>
+</body>
+</html>

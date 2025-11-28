@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="segundos" type="number" placeholder="Segundos" value="10">
+  <button onclick="iniciar()">Iniciar cuenta atrás</button>
+  <h2 id="tiempo"></h2>
+
+  <script>
+    let intervalo;
+    function iniciar() {
+      clearInterval(intervalo);
+      let seg = parseInt(document.getElementById("segundos").value);
+      document.getElementById("tiempo").innerHTML = seg;
+
+      intervalo = setInterval(() => {
+        seg--;
+        document.getElementById("tiempo").innerHTML = seg;
+        if (seg <= 0) {
+          clearInterval(intervalo);
+          alert("¡Tiempo agotado!");
+        }
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

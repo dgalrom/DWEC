@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="carga">Listo</h2>
+  <button onclick="iniciar()">Iniciar carga</button>
+  <button onclick="parar()">Parar</button>
+
+  <script>
+    let intervalo;
+    let puntos = 0;
+    const textos = ["Cargando.", "Cargando..", "Cargando..."];
+
+    function iniciar() {
+      clearInterval(intervalo);
+      puntos = 0;
+      intervalo = setInterval(() => {
+        document.getElementById("carga").innerHTML = textos[puntos];
+        puntos = (puntos + 1) % 3;
+      }, 500);
+    }
+
+    function parar() {
+      clearInterval(intervalo);
+      document.getElementById("carga").innerHTML = "Parado";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #banner { width: 800px; height: 400px; margin: 20px auto; display: block; }
+    </style>
+</head>
+<body>
+    <img id="banner" src="img/img1.jpg" alt="Banner">
+    <br>
+    <button onclick="pausar()">Pausar</button>
+    <button onclick="reanudar()">Reanudar</button>
+
+    <script>
+        const imagenes = [
+            "img/img1.jpg",
+            "img/img2.jpg",
+            "img/img3.jpg"
+        ];
+
+        let indice = 0;
+        let intervalo;
+
+        function cambiarImagen() {
+            indice = (indice + 1) % imagenes.length;
+            document.getElementById("banner").src = imagenes[indice];
+        }
+
+        function pausar() {
+            clearInterval(intervalo);
+        }
+
+        function reanudar() {
+            intervalo = setInterval(cambiarImagen, 2000);
+        }
+
+        window.onload = () => {
+            intervalo = setInterval(cambiarImagen, 2000);
+        };
+    </script>
+</body>
+</html>
